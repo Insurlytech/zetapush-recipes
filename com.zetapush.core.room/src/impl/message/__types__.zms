@@ -5,6 +5,7 @@ class Message {
 	/** Message value */ map value;
 	/** Message created date */ number createdAt;
 	/** Message metadata */ map metadata;
+	/** Message owner */ map owner;
 	/** Message readers */ string[] readers;
 	/** Message targets */ string[] targets;
 }
