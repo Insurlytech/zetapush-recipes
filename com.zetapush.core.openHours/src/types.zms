@@ -16,7 +16,7 @@ class OpenHours {
 /** working hours information for a given day*/
 class DayOpenHours {
 	/** Working hours for the given date */
-	@NotNull @ValidHours OpenHours hours;
+	@NotNull OpenHours hours;
 	/** Date for which hours are to set */
 	@FormattedDate string date;
 }
