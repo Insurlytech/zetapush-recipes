@@ -1,0 +1,12 @@
+/**
+ *
+ */
+macroscript core_room__deleteRoomMessageByService(
+	/** Room room object */ @NotNull Room room,
+	/** Message key */ @NotNull string key,
+	/** Storage Service */ @NotNull service<gda> zpService
+) {
+	trace(core_room__addRoomMessageByService, __parameters);
+	/** Store message */
+	sudo room.owner zpService.removeRow({table : TABLE_ROOM_STORAGE, key, owner: room.owner});
+} return {} on channel __selfName

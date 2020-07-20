@@ -1,0 +1,13 @@
+/**
+ *
+ */
+macroscript deleteRoomMessage(
+	/** Room room object */ @NotNull Room room,
+	/** Message key */ string key
+) {
+	trace(deleteRoomMessage.name, __parameters);
+	/** Delete message in room */
+	await core_room__deleteRoomMessageByService({ 
+		room, key, zpService: zpServiceGda
+	});
+} broadcast(room.resource) {} on channel __selfName
